@@ -1,44 +1,48 @@
-Name:
+Name:Trevor Woosley
 
-Number of elements:
+Number of elements: 10000
 
 Bubble Sort
-Sorted:
-Reversed:
-Random:
+Sorted:3.11064 s
+Reversed:7.44343 s 
+Random:6.07224 s 
 
 Bubble Sort Early Exit
-Sorted:
-Reversed:
-Random:
+Sorted:0.00051 s 
+Reversed:5.97976 s 
+Random:4.66219 s 
 
 Selection Sort
-Sorted:
-Reversed:
-Random:
+Sorted:1.84603 s 
+Reversed:1.97227 s 
+Random:1.96307 s 
 
 Insertion Sort
-Sorted:
-Reversed:
-Random:
+Sorted:0.00089 s
+Reversed:3.77612 s
+Random:1.92398 s 
 
 Merge Sort
-Sorted:
-Reversed:
-Random:
+Sorted:0.01825 s
+Reversed:0.01734 s
+Random:0.02117 s 
 
 Questions to answer:
 1) What was the worst case scenario for any sorting technique?
-
+Bubble sort appeared to be the worst in terms of overall sorting time. 
 
 2) The first 3 sorts have the same runtime of O(n^2). Why were the times different? Why would one be more efficient than the others?
-
+Bubble sort goes through in a line to compare each number with the number next to it, and swaps them if the other number is bigger. This means that the only way to ensure the data is ordered correctly is to go through it multiple times. This means that the code will potentially have to go through the numbers more times than there are points of data in the set.
+Selection sort differs from this by going through the data and finding the largest number and placing it on the end. This is still not the most efficient way to sort, but this does mean the code will only have to go through the data for as many numbers as there are in the data.
+Insertion sort was very fast at sorting the sorted data and slow at sorting the reversed data because it goes through the data set one at a time, and when it finds a number that is out of place, it puts it where it belongs in the set.
+Bubble sort is far and away the least effective way of sorting data. If I had to choose one of these methods to sort my data I would pick selection sort, due to its versaitility when compared with the other options.
 
 3) Why was merge sort so much more efficient?
-
+Merge sort can essentially do double the amount of work in the same amount of time. The list is split, sorted, split and sorted until the list is in order.
 
 4) The built-in sorting technique for most programming languages is known as TimSort.
 This is a merge sort until the arrays have fewer than 10 elements, then it does an insertion sort. Why would this be useful?
-
+This captures the best of both O(n log n) and O(n²) in terms of data sorting. Combining the exponential sorting of merge sort to get a rough order, and then going through this almost sorted data with insertion sort, which has been established to sort ordered data sets the fastest, would allow for unprecedented sorting.
 
 5) What issues can you see with a recursive sorting technique like merge sort?
+It could potentially require a lot of storage for how much is going on at a given time.
